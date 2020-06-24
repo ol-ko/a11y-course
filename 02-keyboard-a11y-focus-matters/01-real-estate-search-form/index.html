@@ -1,55 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Real estate search form</title>
-  <link rel="stylesheet" href="some.css">
-</head>
-<body>
-  <main>
-    <h1>Find your place</h1>
-    <form action="">
-      <div class="center">
-        <label>
-          <input type="radio" name="offerType" id="rent" value="rent" checked>
-          Rent
-        </label>
-
-        <label>
-          <input type="radio" name="offerType" id="buy" value="buy">
-          Buy
-        </label>
-      </div>
-      <div>
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location">
-      </div>
-      <div>
-        <label for="category">Category</label>
-        <select name="category" id="category">
-          <option value="APARTMENT">Apartment</option>
-          <option value="HOUSE">House</option>
-          <option value="OFFICE">Office</option>
-          <option value="HORSEBOX">Horse box</option>
-        </select>
-      </div>
-      <div>
-        <label for="availableFrom">Available from</label>
-        <input type="date" id="availableFrom" name="availableFrom">
-      </div>
-      <div>
-        <label for="maxPrice">Max price(in CHF)</label>
-        <input type="number" name="maxPrice" id="maxPrice" value="0">
-      </div>
-      <div>
-        <label>
-          <input type="checkbox" name="saveSearch" id="saveSearch">
-          Save search
-        </label>
-
-      </div>
-      <input type="submit" value="Search">
-    </form>
-  </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Real estate search form</title>
+    <link rel="stylesheet" href="some.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Find your place</h1>
+      <form action="">
+        <div class="center">
+          <label>
+            <input type="radio" name="offerType" id="rent" value="rent" checked />
+            Rent
+          </label>
+          <label>
+            <input type="radio" name="offerType" id="buy" value="buy" />
+            Buy
+          </label>
+        </div>
+        <div>
+          <label for="location">Location</label>
+          <input type="text" id="location" name="location" />
+        </div>
+        <div>
+          <label for="category">Category</label>
+          <select name="category" id="category">
+            <option value="APARTMENT">Apartment</option>
+            <option value="HOUSE">House</option>
+            <option value="OFFICE">Office</option>
+            <option value="HORSEBOX">Horse box</option>
+          </select>
+        </div>
+        <div>
+          <label for="availableFrom">Available from</label>
+          <input type="date" id="availableFrom" name="availableFrom" />
+        </div>
+        <div>
+          <label for="maxPrice">Max price(in CHF)</label>
+          <input type="number" name="maxPrice" id="maxPrice" value="0" />
+        </div>
+        <div>
+          <label>
+            <input type="checkbox" name="saveSearch" id="saveSearch" />
+            Save search
+          </label>
+        </div>
+        <input type="submit" value="Search" />
+      </form>
+    </main>
+  </body>
 </html>

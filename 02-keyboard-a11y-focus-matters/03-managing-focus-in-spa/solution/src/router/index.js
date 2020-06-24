@@ -1,10 +1,10 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
-  const routes = [
+const routes = [
   {
     path: '/',
     name: 'Home',
@@ -13,25 +13,25 @@ Vue.use(VueRouter)
   {
     path: '/why',
     name: 'Why',
-    component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/Why.vue')
+    component: function() {
+      return import(/* webpackChunkName: "about" */ '../views/Why.vue');
     }
   },
-    {
-      path: '/where',
-      name: 'Where',
-      component: function () {
-        return import(/* webpackChunkName: "about" */ '../views/Where.vue')
-      }
-    },
-    {
-      path: '/get',
-      name: 'Get',
-      component: function () {
-        return import(/* webpackChunkName: "about" */ '../views/Get.vue')
-      }
+  {
+    path: '/where',
+    name: 'Where',
+    component: function() {
+      return import(/* webpackChunkName: "about" */ '../views/Where.vue');
     }
-]
+  },
+  {
+    path: '/get',
+    name: 'Get',
+    component: function() {
+      return import(/* webpackChunkName: "about" */ '../views/Get.vue');
+    }
+  }
+];
 
 const router = new VueRouter({
   mode: 'history',
@@ -53,6 +53,6 @@ const router = new VueRouter({
     // Otherwise, scroll to top for all route navigations
     return { x: 0, y: 0 };
   }
-})
+});
 
-export default router
+export default router;

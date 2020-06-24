@@ -15,14 +15,14 @@
 </template>
 
 <style>
-  html {
-    font-size: 18px;
-    line-height: 2;
-  }
-  body {
-    padding: 0 2rem;
-    margin: 0;
-  }
+html {
+  font-size: 18px;
+  line-height: 2;
+}
+body {
+  padding: 0 2rem;
+  margin: 0;
+}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -45,10 +45,10 @@ footer {
 }
 
 footer a {
-    display: block;
+  display: block;
 }
 
- a {
-   font-weight: bold;
- }
+a {
+  font-weight: bold;
+}
 </style>
