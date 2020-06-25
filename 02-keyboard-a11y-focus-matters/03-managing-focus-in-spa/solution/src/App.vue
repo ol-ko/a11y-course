@@ -31,7 +31,7 @@ export default {
       // allows us to set focus programmatically regardless whether the element is naturally focusable or not
       focusTarget.setAttribute('tabindex', '-1');
       focusTarget.focus();
-      focusTarget.removeAttribute('tabindex');
+      //focusTarget.removeAttribute('tabindex');
     }
   }
 };
