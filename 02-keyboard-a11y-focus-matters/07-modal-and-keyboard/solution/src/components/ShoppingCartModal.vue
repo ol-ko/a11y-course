@@ -1,5 +1,5 @@
 <template>
-  <div class="modal" @keyup.tab="onFocusChange" ref="modal">
+  <div class="modal" @keydown.tab="onFocusChange" ref="modal">
     <div class="modalBackground"></div>
     <div class="modalContainer">
       <button class="close" @click="$emit('close')">
@@ -45,11 +45,10 @@ export default {
   },
   mounted() {
     this.focusedElementBeforeModal = document.activeElement;
+
     const focusableElements = Array.prototype.slice.call(
       this.$refs.modal.querySelectorAll(focusableElementsQueryString)
     );
-
-    console.log(focusableElements);
 
     this.firstTabStop = focusableElements[0];
     this.lastTabStop = focusableElements[focusableElements.length - 1];
@@ -60,17 +59,17 @@ export default {
   },
   methods: {
     onFocusChange(e) {
-      console.log('onFocusChange');
-      if (document.activeElement === this.firstTabStop) {
-        e.preventDefault();
-        this.lastTabStop.focus();
-        return;
-      }
-
-      if (document.activeElement === this.lastTabStop) {
-        e.preventDefault();
-        this.firstTabStop.focus();
-        return;
+      console.log(document.activeElement);
+      if (e.shiftKey) {
+        if (document.activeElement === this.firstTabStop) {
+          e.preventDefault();
+          this.lastTabStop.focus();
+        }
+      } else {
+        if (document.activeElement === this.lastTabStop) {
+          e.preventDefault();
+          this.firstTabStop.focus();
+        }
       }
     }
   }

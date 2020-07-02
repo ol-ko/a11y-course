@@ -8,10 +8,10 @@
         :tabindex="item.checked ? 0 : -1"
         @click="select(index)"
         :ref="`radioGroupItem${index}`"
-        @keyup.up="selectPrevious()"
-        @keyup.left="selectPrevious()"
-        @keyup.down="selectNext()"
-        @keyup.right="selectNext()"
+        @keydown.up="selectPrevious()"
+        @keydown.left="selectPrevious()"
+        @keydown.down="selectNext()"
+        @keydown.right="selectNext()"
       >
         {{ item.label }}
       </li>
@@ -42,6 +42,7 @@ export default {
         ...item,
         checked: index === this.focusedIdx
       }));
+
       this.$nextTick(() => {
         this.$refs[`radioGroupItem${this.focusedIdx}`][0].focus();
       });

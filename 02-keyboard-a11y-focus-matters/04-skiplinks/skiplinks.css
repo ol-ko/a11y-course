@@ -13,6 +13,7 @@
   background: mistyrose;
   border: 2px solid salmon;
   font-weight: bold;
+  z-index: 1;
 }
 
 .skiplinks a:focus {
