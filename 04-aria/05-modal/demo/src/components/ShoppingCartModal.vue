@@ -2,6 +2,10 @@
   <div class="modal" @keydown.tab="onFocusChange" ref="modal">
     <div class="modalBackground"></div>
     <div class="modalContainer">
+      <button class="close" @click="$emit('close')">
+        <img src="/close.svg" alt="Close dialog" />
+        Close
+      </button>
       <h1>Your shopping cart</h1>
       <div class="item">
         <div class="itemDetails">
@@ -23,10 +27,6 @@
         <button class="cta secondary" @click="$emit('close')">Continue shopping</button>
         <button class="cta" @click="$emit('close')">Proceed to checkout</button>
       </div>
-      <button class="close" @click="$emit('close')">
-        <img src="/close.svg" alt="Close navigation" />
-        Close
-      </button>
     </div>
   </div>
 </template>

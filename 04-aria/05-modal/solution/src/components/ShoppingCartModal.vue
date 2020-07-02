@@ -8,7 +8,11 @@
   >
     <div class="modalBackground"></div>
     <div class="modalContainer">
-      <h1 id="modal-label" tabindex="0">Your shopping cart</h1>
+      <button class="close" @click="$emit('close')">
+        <img src="/close.svg" alt="Close dialog" />
+        Close
+      </button>
+      <h1 id="modal-label">Your shopping cart</h1>
       <div class="item">
         <div class="itemDetails">
           <img src="/product.jpg" />
@@ -29,10 +33,6 @@
         <button class="cta secondary" @click="$emit('close')">Continue shopping</button>
         <button class="cta" @click="$emit('close')">Proceed to checkout</button>
       </div>
-      <button class="close" @click="$emit('close')">
-        <img src="/close.svg" alt="Close navigation" />
-        Close
-      </button>
     </div>
   </div>
 </template>
