@@ -2,12 +2,10 @@
   <div id="app">
     <div>
       <Header></Header>
-      <main>
-        <Product
-          :isShoppingCartModalOpen="isShoppingCartModalOpen"
-          @order="isShoppingCartModalOpen = true"
-        ></Product>
-      </main>
+      <Product
+        :isShoppingCartModalOpen="isShoppingCartModalOpen"
+        @order="isShoppingCartModalOpen = true"
+      ></Product>
       <Footer></Footer>
     </div>
     <ShoppingCartModal

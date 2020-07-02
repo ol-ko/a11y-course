@@ -65,7 +65,8 @@ export default {
 }
 
 @media (min-width: 600px) {
-  .mobileMenu {
+  .mobileMenu,
+  .drawerMenu {
     display: none;
   }
 
